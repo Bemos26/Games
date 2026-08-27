@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myGames</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
     <h1>Welcome to {{ platform_name }}</h1>
     <p>Find your favorite Python Games!</p>
     <p>Created by {{ creator }}. We currently have {{ games_count }} games available.</p>
-</body>
-</html>
+{% endblock content %}

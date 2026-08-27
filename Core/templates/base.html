@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Games Platform</title>
+</head>
+<body>
+    <!-- This Navbar will show up on EVERY page -->
+    <nav style="background-color: #333; padding: 10px;">
+        <a href="/" style="color: white; margin-right: 15px; text-decoration: none;">Home</a> 
+        <a href="/guesser/" style="color: white; text-decoration: none;">Number Guesser</a>
+    </nav>
+    <hr>
+
+    <div style="padding: 20px;">
+        <!-- This is the 'hole' where our other pages will plug in -->
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+</body>
+</html>
