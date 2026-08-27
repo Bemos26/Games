@@ -1,0 +1,13 @@
+<h1>Number Guesser</h1>
+<!-- The method is POST because we are sending data securely -->
+ <h3>{{ message }}</h3>
+<form method="POST">
+    {% csrf_token %} 
+    <!-- Django's security handshake. Mandatory! -->
+    
+    <label>Guess a number between 1 and 100:</label>
+    <!-- the 'name' attribute is how Python will identify this input -->
+    <input type="number" name="user_guess" required>
+    
+    <button type="submit">Submit Guess</button>
+</form>
