@@ -16,10 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import include #importing the include function to include the URLs from the guesser app
 
 from Core import views #importing the views from the Core app to use in the URL patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'), #this is the home page of the website. It will display a welcome message to the user.   
+    path('guesser/', include('guesser.urls')), #this is the URL for the guesser game. It will include the URLs from the guesser app.
 ]
