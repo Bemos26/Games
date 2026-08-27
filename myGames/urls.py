@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from Core import views #importing the views from the Core app to use in the URL patterns
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.home, name='home'), #this is the home page of the website. It will display a welcome message to the user.   
 ]
