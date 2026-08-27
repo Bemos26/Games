@@ -1,6 +1,7 @@
 <h1>Number Guesser</h1>
 <!-- The method is POST because we are sending data securely -->
  <h3>{{ message }}</h3>
+ <p>Attempts left: {{ attempts_left }}</p>
 <form method="POST">
     {% csrf_token %} 
     <!-- Django's security handshake. Mandatory! -->
